@@ -9,7 +9,6 @@ end
 
 # LinkedList
 class LinkedList
-
   # This should be removed
   attr_accessor :head
 
