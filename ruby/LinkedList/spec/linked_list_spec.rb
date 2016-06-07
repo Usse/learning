@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-
 describe Node do
   before :each do
     @node = Node.new('Woo')
@@ -17,5 +16,18 @@ describe Node do
       it { expect(@node.value).to eql 'Woo' }
     end
   end
+end
 
+describe LinkedList do
+  before :each do
+    new_node = Node.new('First')
+    @ll = LinkedList.new(new_node)
+  end
+
+  describe '#new' do
+    context 'returns a LinkedList object' do
+      it { expect(@ll).to be_an_instance_of LinkedList }
+      it { expect(@ll.head.value).to eql 'First' }
+    end
+  end
 end
